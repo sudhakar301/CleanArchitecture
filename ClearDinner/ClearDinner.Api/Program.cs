@@ -5,7 +5,7 @@ using CleanDinner.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services.AddApplication();
-    builder.Services.AddInfraStructure();
+    builder.Services.AddInfraStructure(builder.Configuration);
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
